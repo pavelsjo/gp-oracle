@@ -2,13 +2,13 @@
 
 **¿Porqué una carrera de F1 es emocionante?**
 
-Es una pregunta tiene una respuesta diferente según a que persona le preguntemos y es un contexto ideal para hacer Data Science.
+Es una pregunta que tiene una respuesta distinta según a que persona le preguntemos y nos ta también un contexto ideal para hacer Data Science.
 
-En este sentido, en esta carrera usaremos datos de la Evaluación de Experiencia de los Fanáticos de la Fórmula 1 (F1) y crearemos un experimento para entrenar 6 algoritmos de Machine Learning usando Auto Machine Learning (Auto ML) en Autonomous Data Warehouse (ADW) y con Ingeniería de Atributos entenderemos lo que la Inteligencia Artificial "piensa" de esto.
+En este sentido, en esta carrera usaremos datos de la Evaluación de Experiencia de los Fanáticos de la Fórmula 1 (F1) y crearemos un experimento para entrenar 5 algoritmos de Machine Learning usando Auto Machine Learning (Auto ML) en Autonomous Data Warehouse (ADW) y con el Feature Importance analizaremos lo que la Inteligencia Artificial "piensa".
 
 `Pre-requisito: para comenzar, se asume que ya el participante tiene aceso a Oracle Cloud Infrastructure (OCI) y un ADW disponible.`
 
-Las (6) vueltas para llegar a la meta son:
+Las (5) vueltas para llegar a la meta son:
 
 ## 1. Buscar nuestra consola de ADW  [INICIO]
 
