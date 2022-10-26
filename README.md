@@ -10,7 +10,7 @@ En este sentido, en esta carrera usaremos datos de la Evaluación de Experiencia
 
 Las (5) vueltas para llegar a la meta son:
 
-## 1. Buscar nuestra consola de ADW  [INICIO]
+## 1. Buscar ADW en nuestra consola de OCI  [INICIO]
 
 Desde el inicio en consola **Oracle Cloud Infrastructure (OCI)**, presionando el `Menú de Hamburgesa` ubicado arriba a la izquierda de la pantalla podemos ubicar todas las opciones de la nube:
 
