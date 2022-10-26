@@ -87,7 +87,7 @@ Una vez que termine el job, veremos un cuadro de confirmación:
 
 ![img](./img/12-done.png)
 
-Finalmente con el mismo usuario ADMIN, vamos a verificar la tabla que se creó en el ADW. Para ello desde el `<Development>` seleccionamos `SQL`.
+Finalmente con el mismo usuario ADMIN, vamos a verificar la tabla que se creó en el ADW. Para ello desde el `</> Development` seleccionamos `SQL`.
 
 ![img](./img/13-sql-development.png)
 
@@ -121,7 +121,6 @@ En la siguiente vuelta necesitaremos usar al usuario `F1`, y como la tabla `F1_R
 GRANT ALL ON F1_RACES_TRAIN TO F1
 ```
 ![img](./img/15.1-grant-all.png)
-
 
 Finalmente, buscaremos el link que le compartiremos al usuario**F1** seleccionado `Oracle Machine Learning` en el apartado del `</> Development`.
 
