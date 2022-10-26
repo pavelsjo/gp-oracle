@@ -16,7 +16,7 @@ Desde el inicio en consola **Oracle Cloud Infrastructure (OCI)**, presionando el
 
 ![img](./img/0-oci-consola.png)
 
-Luego, en el menu que se despliega seleccionamos primero `Oracle Data Bases` y después `Autonomous Data Warehouse`.
+Luego, en el menú que se despliega seleccionamos primero `Oracle Database` y después `Autonomous Data Warehouse`.
 
 Y allí veremos todas las instancias que tenemos creadas.
 
@@ -24,21 +24,21 @@ Y allí veremos todas las instancias que tenemos creadas.
 
 Actualmente mi instancia se llama `ADWF1` y está Available, en este sentido, debes observar un escenario similar con el nombre de base de datos que hayas escogido.
 
-Luego, en caso de que no veas tu actual innstancia puedes verificar y ajustar:
+Luego, en caso de que no veas tu actual instancia puedes verificar y ajustar:
 
 - Tenancy. Ejemplo: US East (Ashburn).
 - Compartment. Ejemplo: Public Sector.
 - Worload Type. Ejemplo: Data Warehouse.
 
-Luego dando click en la instancia `ADWF1` llegamos a los detalles:
+Asímismo, dando click en la instancia `ADWF1` llegaremos a los detalles:
 
 ![img](./img/2-detalles-de-la-instancia.png)
 
-2. Crear un usuario de base de datos llamado F1 uando Databse Actions.
+## 2. Crear un usuario de base de datos llamado F1 uando Databse Actions.
 
 ![img](./img/3db-actions.png)
 
-En el siguiente paso nos concentraremos en las Data Base Actions, en el que haciendo click nos abrirá una nueva pestaña en el navegador y nos preguntara por nuestro usuario (ADMIN) y contraseña.
+En el siguiente paso nos concentraremos en las Data Base Actions, y haciendo click nos abrirá una nueva pestaña en el navegador y nos preguntara por nuestro usuario (ADMIN) y contraseña.
 
 ![img](./img/4-login.png)
 
@@ -46,24 +46,24 @@ Luego, veremos la interfaz principal y seleccionaremos la opción **DATABASE USE
 
 ![img](./img/5-db-actions.png)
 
-En este apaartado daremos click en el botón `+ Create New User`.
+En este apartado daremos click en el botón `+ Create New User`.
 
 Y finalmente crearemos nuestro usuario `F1` con las opciones que vemos en pantalla:
 
 ![img](./img/6-creacion-de-usuario.png)
 
 
-`Nota: en caso de que no veas estas pantallas, verifica que las pantallas emergentes PopUps de tu navegador este habilitadas, usualmente aparecen con un mensaje visible a la izquierda de la barra de navegación.`
+`Nota: en caso de que no veas estas pantallas, verifica que las ventanas emergentes PopUps de tu navegador este habilitadas, usualmente aparecen con un mensaje visible a la izquierda de la barra de navegación.`
 
-## 2. Cargar un set de datos
+## 3. Cargar un set de datos
 
-Existen varias formas de hacer este paso, y el camino seleccionado apunta a que un usuario gestor de la base de datos (ADMIN) en su labor de data managment carge los datos y otorge un acceso al científico de datos (F1). 
+Existen varias formas de hacer este paso, y el camino planteado apunta a que un usuario gestor de la base de datos (ADMIN) en su labor de data managment carge los datos y otorge un acceso al científico de datos (F1). 
 
-Entonces, aun con el usuario ADMIN abrimos el menu de la hamburgesa que está arriba a la izquierda y de la solapa `Data Studio` seleccionamos `Data Load.`
+Entonces, aun con el usuario ADMIN abrimos el menú de la hamburgesa que está arriba a la izquierda, y de la solapa `Data Studio` seleccionamos `Data Load.`
 
 ![img](./img/7-menu-dbactions.png)
 
-Y luego seleccionamos las opciones `LOAD DATA`, `CLOUD STORE` y damos click en `Next`.
+Luego seleccionamos las opciones `LOAD DATA`, `CLOUD STORE` y damos click en `Next`.
 
 ![img](./img/8-load-action.png)
 
@@ -71,11 +71,11 @@ Aquí usaremos el siguiente:
 
 - **ENLACE_PUBLICO:** https://objectstorage.us-ashburn-1.oraclecloud.com/n/idi1o0a010nx/b/oci-public-bucket/o/F1_RACES_TRAIN.json
 
-Y lo copiaremos en lo copiaremos en la barra:
+Y lo copiaremos en la barra:
 
 ![img](./img/9-url.png)
 
-Y con el click izquierdo del maouse, arrastraremos el set de datos `F1_RACES_TRAIN` del panel izquierdo al panel derecho.
+Con el click izquierdo del mouse, arrastraremos el set de datos `F1_RACES_TRAIN` del panel izquierdo al panel derecho.
 
 ![img](./img/10-arrastrar.png)
 
@@ -83,7 +83,7 @@ Luego daremos play al **botón verde** para ejecutar nuestro job, que consiste e
 
 ![img](./img/11-run.png)
 
-Y una vez que termine el job, veremos un cuadro de confirmación:
+Una vez que termine el job, veremos un cuadro de confirmación:
 
 ![img](./img/12-done.png)
 
@@ -91,7 +91,7 @@ Finalmente con el mismo usuario ADMIN, vamos a verificar la tabla que se creó e
 
 ![img](./img/13-sql-development.png)
 
-Y allí vemos a la izquierda la tabla `F1_RACES_TRAIN`.
+Allí vemos a la izquierda la tabla `F1_RACES_TRAIN`.
 
 ![img](./img/14-table-check.png)
 
@@ -106,15 +106,16 @@ FROM
 
 ![img](./img/15-view-table.png)
 
-Esta tabla `F1_RACES_TRAIN` fué el producto de funcionar otros sets de datos de Fórmula 1 y hacer Ingeniería de Atributos, y ese contexto es suficienta para nuestro objetivo, en este sentido si quieres todos los detalles como un opcional después de terminar la carrera, el link se encuentra al final de este documento.
+Esta tabla `F1_RACES_TRAIN` fué el producto de funcionar otros sets de datos de Fórmula 1 y hacer Ingeniería de Atributos, y ese contexto es susuficiente para nuestro objetivo, en este sentido si quieres todos los detalles como un opcional después de terminar la carrera, el link se encuentra al final de este documento.
 
-Debes saber, que:
+Principalmente debes saber, que:
 
-- Cada `fila` respresenta una carrera.
-- Nuestro **TARGET** será el `SCORE`, que representa que tan "buena" fué la experiencia según una encuesta a los aficionados y será lo que queremos predecir.
+- Cada `fila` respresenta todos los datos de una carrera.
+- Nuestro **TARGET** será el `SCORE`, que representa que tan "buena" fué la experiencia según una encuesta a los aficionados y será lo que queremos predecir. 
 
+Es decir, en base a los otras columnas(features) de cada fila nuestro(s) algoritmo(s) "aprenderá(n)" a predecir el SCORE, el cuál es un valor numérico continuo y será un tipo de entrenamiento supervisado, una regresión.
 
-En la siguiente vuelta necesitaremos usar al usuario `F1`, como la tabla `F1_RACES_TRAIN` la creamos desde el usuario **ADMIN**, debemos otogar permisos de lectura al usuario **F1**, por lo tanto, ubicados en la misma pantalla borramos el Query anterior y ejecutamos el siguiente comando:
+En la siguiente vuelta necesitaremos usar al usuario `F1`, y como la tabla `F1_RACES_TRAIN` la creamos desde el usuario **ADMIN**, entonces, debemos otogar permisos de lectura al usuario **F1**, por lo tanto, ubicados en la misma pantalla borramos el Query anterior y ejecutamos el siguiente:
 
 ```sql
 GRANT ALL ON F1_RACES_TRAIN TO F1
@@ -122,7 +123,7 @@ GRANT ALL ON F1_RACES_TRAIN TO F1
 ![img](./img/15.1-grant-all.png)
 
 
-Finalmente, buscaremos el link que le compartiremos al usuario**F1** seleccionado `Oracle Machine Learning`.
+Finalmente, buscaremos el link que le compartiremos al usuario**F1** seleccionado `Oracle Machine Learning` en el apartado del `</> Development`.
 
 ![img](./img/16-link-ml.png)
 
@@ -194,4 +195,4 @@ Vemos que le más importante fue:
 
 ## Nota Final
 
-Este laboratorio fue diseñado a partir los [LiveLabs](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/home?session=111942316258990) en [Title Learn Analytics and Machine Learning with Red Bull Racing](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=909&clear=RR,180&session=111942316258990)
+Este laboratorio fue diseñado a partir los [LiveLabs](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/home?session=111942316258990) en [Learn Analytics and Machine Learning with Red Bull Racing](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=909&clear=RR,180&session=111942316258990)
